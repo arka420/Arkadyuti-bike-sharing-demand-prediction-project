@@ -1,70 +1,20 @@
-# Arkadyuti-bike-sharing-demand-prediction-project
+# Bike Sharing Demand Prediction
+This is a project that predicts the demand for bike sharing based on various attributes such as weather conditions, time of day, and user demographics. The dataset used in this project is publicly available.
 
+## Project Goal
+The main goal of this project is to build a machine learning model that can accurately predict the demand for bike sharing based on various input features.
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+## Dataset
+The dataset used in this project contains hourly bike rental data spanning two years. It includes information such as date, time, temperature, humidity, wind speed, and the number of bikes rented in that hour. There are a total of 18760 obervations and 14 features in the dataset.
 
-## Overview
+## Exploratory Data Analysis
+The dataset was first analyzed to gain insights into the distribution of data, correlations between attributes, and missing values. The analysis showed that the data was mostly normally distributed and there were some correlations between attributes. Additionally, there were no missing values in the dataset.
 
-This repository contains the code and data for a bike-sharing demand prediction project. Our goal is to predict the demand for bike-sharing services in a city, which can assist in optimizing resource allocation and improving user experience.
+## Data Pre-processing
+The data was pre-processed by removing unnecessary attributes. I've enhanced the DataFrame's usability by replacing column names with more descriptive and readable labels. Additionally, I converted the 'Date' column to a datetime data type, enabling access to various time-related properties and columns. To provide more insights, I introduced new columns, including 'Year,' 'Month,' 'Day,' and a pivotal 'Week' column categorized as 'weekend' or 'weekday.' To optimize data representation, I transformed the 'Hour,' 'Month,' 'Week,' 'Functioning_day,' 'Seasons,' and 'Holiday' columns into categorical data types, simplifying data analysis and visualization.
 
-## Table of Contents
+## Model Building
+Several machine learning algorithms were used to build the prediction model, including linear regression, ridge regression, lasso regression,random forest. Each model was evaluated using various performance metrics such as mean squared error (MSE) and root mean squared error (RMSE).
 
-- [Getting Started](#getting-started)
-- [Data Sources](#data-sources)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
-- [Contact](#contact)
-
-## Getting Started
-
-Clone this repository to your local machine to get started.
-
-```bash
-git clone https://github.com/yourusername/bike-sharing-prediction.git
-```
-
-### Prerequisites
-
-- Python 3.6+
-- Required Python packages (listed in `requirements.txt`)
-
-### Data Sources
-
-To run this project, you'll need the following data sources:
-
-- Historical bike-sharing usage data
-- Weather data
-- Calendar data
-
-These data sources are not included in the repository due to their size, but you can obtain them from [provide source link or instructions].
-
-## Installation
-
-1. Install the required Python packages using pip:
-
-```bash
-pip install -r requirements.txt
-```
-
-2. [Add any additional installation instructions, if necessary]
-
-## Usage
-
-1. [Provide instructions on how to preprocess the data if necessary]
-2. [Explain how to train and evaluate the prediction model]
-3. [Provide code examples or command-line instructions for using the project]
-
-
-
-
-
-## Contact
-
-If you have any questions or suggestions, feel free to reach out to us at [arkadyutidhara578@gmail.com].
-
----
-
-[Include any badges, links to documentation, or additional project-specific information as needed]
-
+## Conclusion
+The results of the model evaluation showed that the random forest algorithm performed the best with the lowest MSE and RMSE. The final model was trained on the entire dataset and can be used to predict the demand for bike sharing given various input features.
